@@ -1,1 +1,31 @@
+package ExArrayVet1;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class ExVet1 {
+
+	public static void main(String[] args) {
+		int numeros[] = new int[] {25,37,80,58,61,10,17,19,38,40};
+		int inserido, posicao=0;
+		Scanner leia = new Scanner(System.in);
+		System.out.println("\nInsira qualquer número inteiro: ");
+		inserido = leia.nextInt();
+		posicao = Arrays.binarySearch(numeros, inserido);
+		for(int i=0; i<numeros.length; i++) {
+		if (numeros[i]==inserido) {
+			posicao=i;
+			break;
+		}
+		}
+		if(posicao>=0) {
+		System.out.println("\nO número inserido foi encontrado na posição: "+posicao);
+		}else {
+			System.out.println("\nO número inserido não foi encontrado!");
+		}
+		
+		
+
+	}
+
+}
